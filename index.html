@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Buy TBC with Liquid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="container" id="tbc">
+      <h1>TBC with Liquid</h1>
+      <p>
+        Buy from
+        <a href="https://embed.thebitcoincompany.com" target="_blank"
+          >The Bitcoin Company</a
+        >
+        with Liquid.<br />
+        Powered by
+        <a href="https://boltz.exchange" target="_blank">Boltz</a> and
+        <a href="https://vulpem.com/marina.html" target="_blank">Marina</a>.
+      </p>
+      <noscript>Needs javascript to run.</noscript>
+      <p class="show-on-mobile" style="display: none">Only works on desktop.</p>
+      <div class="flexed only-if-js show-on-desktop" style="display: none">
+        <div id="iframeContainer">
+          <iframe
+            src="https://embed.thebitcoincompany.com/giftcard"
+            style="height: 720px; width: 100%"></iframe>
+        </div>
+        <div id="actionContainer">
+          <div id="feesContainer">
+            <p class="waiting">Loading fees</p>
+          </div>
+          <div id="limitsContainer">
+            <p class="waiting">Loading limits</p>
+          </div>
+          <div id="amountContainer">
+            <p class="waiting">&larr; Waiting for invoice</p>
+          </div>
+          <div id="buttonContainer"></div>
+        </div>
+      </div>
+    </div>
+    <template id="feesTemplate">
+      <p>Boltz fees</p>
+      <div class="flexed">
+        <p>Miner fees</p>
+        <p id="minerFees"></p>
+      </div>
+      <div class="flexed">
+        <p>Percentage</p>
+        <p id="percentage"></p>
+      </div>
+    </template>
+    <template id="limitsTemplate">
+      <p>Boltz limits</p>
+      <div class="flexed">
+        <p>Min</p>
+        <p id="minimum"></p>
+      </div>
+      <div class="flexed">
+        <p>Max</p>
+        <p id="maximum"></p>
+      </div>
+    </template>
+    <template id="amountTemplate">
+      <p>Amount</p>
+      <div class="flexed">
+        <p>Invoice</p>
+        <p id="invoiceAmount"></p>
+      </div>
+      <div class="flexed">
+        <p>Boltz fees</p>
+        <p id="feeAmount"></p>
+      </div>
+      <hr />
+      <div class="flexed">
+        <p>Total</p>
+        <p id="totalAmount"></p>
+      </div>
+    </template>
+    <template id="payWithMarinaTemplate">
+      <button class="btn" id="payWithMarinaButton" disabled>
+        Pay with Marina
+      </button>
+    </template>
+    <template id="installMarinaTemplate">
+      <p>
+        <a class="btn" href="https://vulpem.com/marina.html" target="_blank"
+          >Install Marina</a
+        >
+      </p>
+    </template>
+  </body>
+  <script src="./decimal.js"></script>
+  <script src="./script.js"></script>
+</html>
