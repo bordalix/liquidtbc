@@ -161,7 +161,7 @@ iframe {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   body {
     --black: rgb(245, 244, 243); /* white */
     --cream: rgb(59, 75, 89);
